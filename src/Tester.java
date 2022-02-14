@@ -23,16 +23,16 @@ public class Tester
         testScramble(result6, "A", 6);
         String result7 = WordScramble.scrambleWord("");
         testScramble(result7, "", 7);
-
-        System.out.println("--------- TEST scrambleOrRemove (part b) ---------");
-        ArrayList<String> testWordList = new ArrayList<String>(Arrays.asList("TAN", "ABRACADABRA", "WHOA", "APPLE", "EGGS"));
-        WordScramble.scrambleOrRemove(testWordList);
-        ArrayList<String> expectedAfterScrambleRemove = new ArrayList<String>(Arrays.asList("TNA", "BARCADABARA", "PAPLE"));
-        testScrambleRemove(testWordList, expectedAfterScrambleRemove, 8);
-        System.out.println("--------------------------------------------------");
-        int totalTests = passedTests + failedTests;
-        System.out.println("TOTAL PASSED TESTS: " + passedTests + " out of " + totalTests);
-        System.out.println("TOTAL FAILED TESTS: " + failedTests + " out of " + totalTests);
+//
+//        System.out.println("--------- TEST scrambleOrRemove (part b) ---------");
+//        ArrayList<String> testWordList = new ArrayList<String>(Arrays.asList("TAN", "ABRACADABRA", "WHOA", "APPLE", "EGGS"));
+//        WordScramble.scrambleOrRemove(testWordList);
+//        ArrayList<String> expectedAfterScrambleRemove = new ArrayList<String>(Arrays.asList("TNA", "BARCADABARA", "PAPLE"));
+//        testScrambleRemove(testWordList, expectedAfterScrambleRemove, 8);
+//        System.out.println("--------------------------------------------------");
+//        int totalTests = passedTests + failedTests;
+//        System.out.println("TOTAL PASSED TESTS: " + passedTests + " out of " + totalTests);
+//        System.out.println("TOTAL FAILED TESTS: " + failedTests + " out of " + totalTests);
     }
 
     public static void testScramble(String actual, String expected, int testNo)
@@ -52,36 +52,36 @@ public class Tester
         System.out.println("   Actual: " + actual);
     }
 
-    public static void testScrambleRemove(ArrayList<String> actual, ArrayList<String> expected, int testNo)
-    {
-        boolean equalLists = true;
-        if (actual.size() != expected.size())
-        {
-            equalLists = false;
-        }
-        else
-        {
-            for (int i = 0; i < actual.size(); i++)
-            {
-                if (!actual.get(i).equals(expected.get(i)))
-                {
-                    equalLists = false;
-                }
-            }
-        }
-
-        System.out.print("TEST #" + testNo + " -- ");
-        if (equalLists)
-        {
-            System.out.println("PASS!");
-            passedTests++;
-        }
-        else
-        {
-            System.out.println("*****FAIL*****");
-            failedTests++;
-        }
-        System.out.println(" Expected: " + expected);
-        System.out.println("   Actual: " + actual);
-    }
+//    public static void testScrambleRemove(ArrayList<String> actual, ArrayList<String> expected, int testNo)
+//    {
+//        boolean equalLists = true;
+//        if (actual.size() != expected.size())
+//        {
+//            equalLists = false;
+//        }
+//        else
+//        {
+//            for (int i = 0; i < actual.size(); i++)
+//            {
+//                if (!actual.get(i).equals(expected.get(i)))
+//                {
+//                    equalLists = false;
+//                }
+//            }
+//        }
+//
+//        System.out.print("TEST #" + testNo + " -- ");
+//        if (equalLists)
+//        {
+//            System.out.println("PASS!");
+//            passedTests++;
+//        }
+//        else
+//        {
+//            System.out.println("*****FAIL*****");
+//            failedTests++;
+//        }
+//        System.out.println(" Expected: " + expected);
+//        System.out.println("   Actual: " + actual);
+//    }
 }
